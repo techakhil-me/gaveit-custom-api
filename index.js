@@ -45,10 +45,9 @@ const productDetails = async (asin, req, res) => {
 };
 
 app.get("/gaveit/:id", (req, res) => {
-  res.writeHead(200, {
+  res.set({
     "Content-Type": "application/json",
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Credentials": true
+    "Access-Control-Allow-Origin": "*"
   });
   var id = req.params.id;
   if (id === "search") {
